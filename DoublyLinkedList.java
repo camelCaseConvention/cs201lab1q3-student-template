@@ -120,7 +120,7 @@ public class DoublyLinkedList<E> {
         Node<E> curr = header.next;
         List<E> ls = new ArrayList<>();
         int cnt = 0;
-        while(curr != null){
+        while(curr != trailer){
             if(curr.getElement() != null) ls.add(curr.getElement());
             else cnt++;
             curr = curr.next; 
@@ -128,6 +128,7 @@ public class DoublyLinkedList<E> {
         header = new Node<>(null, null, null);
         trailer = new Node<>(null, header, null);
         header.setNext(trailer);
+        size = 0;
         for(int i = 0; i < cnt; i++) addLast(null);
         for(E e: ls) addLast(e);
         //Hello
