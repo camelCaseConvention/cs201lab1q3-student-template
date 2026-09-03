@@ -130,5 +130,6 @@ public class DoublyLinkedList<E> {
         header.setNext(trailer);
         for(int i = 0; i < cnt; i++) addLast(null);
         for(E e: ls) addLast(e);
+        //Hello
     }
 }
